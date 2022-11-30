@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
+import { VitePWA } from "vite-plugin-pwa";
 import UnoCSS from "@unocss/vite";
 import { DirResolverHelper, dirResolver } from "vite-auto-import-resolvers";
 
@@ -21,6 +22,7 @@ export default defineConfig({
                 }
             }
         }),
+        VitePWA(),
         UnoCSS(),
         Components({
             deep: false

@@ -7,16 +7,12 @@
 </template>
 
 <script lang="ts" setup>
-    const props = defineProps({
-        label: {
-            type: String,
-            required: true,
-            default: "onnivora"
-        },
-        icon: String
-    });
+    const props = defineProps<{
+        label: string
+        icon: string
+    }>();
 
-    const { selectedDiet } = useIngredients();
+    const { selectedDiet } = useDiet();
 
     const setNewDiet = (label: string) => {
         selectedDiet.value = label;

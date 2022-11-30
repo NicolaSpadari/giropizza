@@ -5,15 +5,15 @@
         </Transition>
 
         <div fixed inset-0 z-10 overflow-y-auto :class="{ 'pointer-events-none': !props.visible }">
-            <div flex min-h-full items-end justify-center p-4 text-center sm="items-center p-0">
+            <div flex min-h-full justify-center p-4 items-center text-center sm="p-0">
                 <Transition enter-active-class="ease-out duration-300" enter-from-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" enter-to-class="opacity-100 translate-y-0 sm:scale-100" leave-active-class="ease-in duration-200" leave-from-class="opacity-100 translate-y-0 sm:scale-100" leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                     <div v-show="props.visible" relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm="my-8 w-full max-w-3xl">
-                        <div bg-dark-700 px-4 py-3 sm="flex flex-row-reverse px-6">
+                        <div bg-dark-700 px-4 py-3 sm="px-6" text-right>
                             <button type="button" @click="emit('close')">
                                 <i-heroicons-solid-x-circle text-red-900 w-10 h-10 />
                             </button>
                         </div>
-                        <div bg-dark-500 space-y-20 px-4 pt-5 pb-4 sm="p-6 pb-4">
+                        <div bg-dark-500 space-y-20 px-4 pt-5 pb-4 sm="p-10">
                             <div space-y-3>
                                 <p bordered text-center text-7xl text-amber font-bold font-heading>
                                     Dieta
@@ -30,8 +30,8 @@
                                 <p bordered text-center text-6xl text-amber font-bold font-heading>
                                     Escludi
                                 </p>
-                                <div grid grid-cols-2 lg="grid-cols-4" gap-4>
-                                    <button v-for="item in exclude" :key="item.label" btn rounded-xl border-2 border-red-900 flex flex-col items-center justify-center space-y-3 text-red-900 font-bold uppercase p-4 :class="item.label === selectedExclude ? 'active' : ''" type="button" @click="selectedExclude = item.label">
+                                <div grid grid-cols-2 lg="grid-cols-3" gap-4>
+                                    <button v-for="item in exclude" :key="item.label" btn rounded-xl border-2 border-red-900 flex flex-col items-center justify-center space-y-3 text-red-900 font-bold uppercase p-4 :class="item.label === selectedExclusion ? 'active' : ''" type="button" @click="selectedExclusion = item.label">
                                         <span>{{ item.label }}</span>
 
                                         <div :class="item.icon" w-6 h-6 text-amber />
@@ -47,13 +47,13 @@
 </template>
 
 <script lang="ts" setup>
-    const props = defineProps({
-        visible: Boolean
-    });
+    const props = defineProps<{
+        visible: boolean
+    }>();
 
     const emit = defineEmits(["close"]);
 
-    const { diet, exclude, selectedDiet, selectedExclude } = useIngredients();
+    const { diet, exclude, selectedDiet, selectedExclusion } = useDiet();
 </script>
 
 <style scoped>
