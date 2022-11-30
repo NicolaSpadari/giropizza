@@ -11,9 +11,6 @@ declare module '@vue/runtime-core' {
     Generator: typeof import('./src/components/Generator.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
     Modal: typeof import('./src/components/Modal.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     ScrollingPhrase: typeof import('./src/components/ScrollingPhrase.vue')['default']
-    Test: typeof import('./src/components/Test.vue')['default']
   }
 }

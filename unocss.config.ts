@@ -12,7 +12,7 @@ import {
 
 export default defineConfig({
     shortcuts: [
-        ["crate", "container mx-auto"]
+        ["crate", "container max-w-5xl mx-auto px-5 md:px-7 lg:px-10"]
     ],
     safelist: [
         "i-fa-solid-drumstick-bite",
