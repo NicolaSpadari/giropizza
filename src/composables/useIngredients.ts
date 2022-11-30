@@ -1,5 +1,5 @@
 const selectedDiet = useSessionStorage("diet", "onnivora");
-const selectedExclude = useSessionStorage("exclude", "");
+const selectedExclude = useSessionStorage("exclude", "nulla");
 
 const useIngredients = () => {
     const diet = [
