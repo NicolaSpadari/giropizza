@@ -7,6 +7,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
+        "serve": "vite preview",
+        "https-preview": "serve dist",
         "lint": "eslint --fix --ext .js,.ts,.vue,.json ."
     },
     "dependencies": {
@@ -21,6 +23,7 @@
         "@types/node": "^18.11.9",
         "@vitejs/plugin-vue": "^3.2.0",
         "eslint": "^8.28.0",
+        "https-localhost": "^4.7.1",
         "sass": "^1.56.1",
         "typescript": "^4.9.3",
         "unocss": "^0.47.3",

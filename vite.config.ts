@@ -22,7 +22,34 @@ export default defineConfig({
                 }
             }
         }),
-        VitePWA(),
+        VitePWA({
+            registerType: "autoUpdate",
+            includeAssets: ["favicon.ico", "robots.txt"],
+            manifest: {
+                name: "Spada Giropizza",
+                short_name: "Giropizza",
+                description: "A tiny app to create new pizza toppings",
+                theme_color: "#0d0e0e",
+                icons: [
+                    {
+                        src: "android-chrome-192x192.png",
+                        sizes: "192x192",
+                        type: "image/png"
+                    },
+                    {
+                        src: "android-chrome-512x512.png",
+                        sizes: "512x512",
+                        type: "image/png"
+                    },
+                    {
+                        src: "android-chrome-512x512.png",
+                        sizes: "512x512",
+                        type: "image/png",
+                        purpose: "any maskable"
+                    }
+                ]
+            }
+        }),
         UnoCSS(),
         Components({
             deep: false
@@ -35,7 +62,7 @@ export default defineConfig({
                 "@vueuse/core",
                 "@vueuse/head"
             ],
-            resolvers: [dirResolver(), ]
+            resolvers: [dirResolver()]
         })
     ],
     server: {
