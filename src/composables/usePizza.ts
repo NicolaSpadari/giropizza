@@ -245,14 +245,6 @@ const usePizza = () => {
             newIngredients = ingredients;
         }
 
-        const selection = newIngredients.filter((ing) => {
-            return !ing.restrizioni.includes(selectedExclude.value);
-        });
-
-        console.log("selection", selection);
-        console.log("newIngredients", newIngredients);
-        console.log("excluded", selectedExclude.value);
-
         const result = getRandom(newIngredients, 3);
         const valueLabels = result.map((ing) => {
             return ing.nome;
