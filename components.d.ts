@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Box: typeof import('./src/components/Box.vue')['default']
+    Footer: typeof import('./src/components/Footer.vue')['default']
     Generator: typeof import('./src/components/Generator.vue')['default']
     Logo: typeof import('./src/components/Logo.vue')['default']
     Modal: typeof import('./src/components/Modal.vue')['default']
