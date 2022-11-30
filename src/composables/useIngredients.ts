@@ -1,4 +1,4 @@
-const selectedDiet = useSessionStorage("diet", "vegana");
+const selectedDiet = useSessionStorage("diet", "onnivora");
 const selectedExclude = useSessionStorage("exclude", "");
 
 const useIngredients = () => {
