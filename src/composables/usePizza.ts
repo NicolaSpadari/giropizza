@@ -213,9 +213,6 @@ const usePizza = () => {
     let newIngredients = [] as any[];
 
     const getPizza = () => {
-        console.log(`selected diet: ${selectedDiet.value}`);
-        console.log(`excluding: ${selectedExclude.value}`);
-
         if (selectedDiet.value === "pescitariana") {
             newCats = categories.filter((coppia) => {
                 return !coppia.includes("maiale");
