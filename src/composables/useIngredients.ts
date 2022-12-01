@@ -124,7 +124,15 @@ const useIngredients = () => {
         categoria: "formaggio",
         restrizioni: ["lattosio"]
     }, {
+        nome: "pancetta",
+        categoria: "maiale",
+        restrizioni: ["carne"]
+    }, {
         nome: "peperoni",
+        categoria: "verdura",
+        restrizioni: []
+    }, {
+        nome: "radicchio",
         categoria: "verdura",
         restrizioni: []
     }, {
@@ -137,7 +145,15 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "zucca",
-        categoria: "formaggio",
+        categoria: "verdura",
+        restrizioni: []
+    }, {
+        nome: "fiori di zucca",
+        categoria: "verdura",
+        restrizioni: []
+    }, {
+        nome: "crema di zucca",
+        categoria: "topping",
         restrizioni: []
     }, {
         nome: "rucola",
@@ -147,6 +163,10 @@ const useIngredients = () => {
         nome: "prosciutto crudo",
         categoria: "maiale",
         restrizioni: ["carne"]
+    }, {
+        nome: "rosmarino",
+        categoria: "topping",
+        restrizioni: []
     }, {
         nome: "cipolla",
         categoria: "verdura",
@@ -196,20 +216,44 @@ const useIngredients = () => {
         categoria: "verdura",
         restrizioni: []
     }, {
+        nome: "pomodori secchi",
+        categoria: "verdura",
+        restrizioni: []
+    }, {
         nome: "spinaci",
+        categoria: "verdura",
+        restrizioni: []
+    }, {
+        nome: "ragù",
+        categoria: "topping",
+        restrizioni: ["carne"]
+    }, {
+        nome: "pistacchi",
         categoria: "topping",
         restrizioni: []
+    }, {
+        nome: "sfilacci di cavallo",
+        categoria: "topping",
+        restrizioni: ["carne"]
     }, {
         nome: "brie",
         categoria: "formaggio",
         restrizioni: ["lattosio"]
+    }, {
+        nome: "asparagi",
+        categoria: "verdura",
+        restrizioni: []
+    }, {
+        nome: "mais",
+        categoria: "verdura",
+        restrizioni: []
     }, {
         nome: "ricotta",
         categoria: "formaggio",
         restrizioni: ["lattosio"]
     }] as Ingredient[];
 
-    const categories = [["maiale", "verdura"], ["maiale", "formaggio"], ["maiale", "topping"], ["pesce", "verdura"], ["pesce", "topping"], ["frutta", "formaggio"], ["formaggio", "formaggio"], ["formaggio", "verdura"], ["formaggio", "topping"], ["verdura", "verdura"], ["verdura", "topping"], ["maiale", "formaggio", "topping"], ["maiale", "formaggio", "verdura"], ["maiale", "verdura", "topping"], ["maiale", "topping", "topping"], ["pesce", "verdura", "topping"], ["pesce", "topping", "topping"], ["formaggio", "formaggio", "formaggio"], ["formaggio", "formaggio", "topping"], ["formaggio", "verdura", "topping"], ["formaggio", "topping", "topping"], ["verdura", "verdura", "topping"], ["maiale", "formaggio", "verdura", "topping"], ["maiale", "formaggio", "formaggio", "topping"], ["maiale", "formaggio", "formaggio", "verdura"], ["maiale", "formaggio", "topping", "topping"], ["maiale", "verdura", "verdura", "topping"], ["formaggio", "formaggio", "formaggio", "formaggio"]] as IngredientCategory;
+    const categories = [["maiale", "verdura"], ["maiale", "formaggio"], ["maiale", "topping"], ["pesce", "verdura"], ["pesce", "topping"], ["frutta", "formaggio"], ["formaggio", "formaggio"], ["formaggio", "verdura"], ["formaggio", "topping"], ["verdura", "verdura"], ["verdura", "topping"], ["maiale", "formaggio", "topping"], ["maiale", "formaggio", "verdura"], ["maiale", "verdura", "topping"], ["maiale", "topping", "topping"], ["pesce", "verdura", "topping"], ["pesce", "topping", "topping"], ["formaggio", "formaggio", "formaggio"], ["formaggio", "formaggio", "topping"], ["formaggio", "verdura", "topping"], ["formaggio", "topping", "topping"], ["verdura", "verdura", "topping"], ["maiale", "formaggio", "verdura", "topping"], ["maiale", "formaggio", "formaggio", "topping"], ["maiale", "formaggio", "formaggio", "verdura"], ["maiale", "formaggio", "topping", "topping"], ["maiale", "verdura", "verdura", "topping"], ["formaggio", "formaggio", "formaggio", "formaggio"]] as IngredientCategories;
 
     return {
         ingredients,

@@ -1,4 +1,5 @@
 const pizza = ref("");
+const ingredientsNumber = ref(3);
 
 const usePizza = () => {
     const { selectedDiet, selectedExclusion } = useDiet();
@@ -49,18 +50,23 @@ const usePizza = () => {
             return !ing.restrizioni.includes(selectedExclusion.value);
         });
 
-        const result = getRandom(newIngredients, 3);
+        const result = getRandom(newIngredients, ingredientsNumber.value);
         const valueLabels = result.map((ing) => {
             return ing.nome;
         });
         const last = valueLabels.pop();
 
-        pizza.value = `${valueLabels.join(", ")} e ${last}`;
+        if (ingredientsNumber.value === 1) {
+            pizza.value = `${valueLabels.join(", ")} con ${last}`;
+        } else {
+            pizza.value = `${valueLabels.join(", ")} e ${last}`;
+        }
     };
 
     return {
         pizza,
-        getPizza
+        getPizza,
+        ingredientsNumber
     };
 };
 
