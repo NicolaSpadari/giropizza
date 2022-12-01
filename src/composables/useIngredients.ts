@@ -24,11 +24,11 @@ const useIngredients = () => {
         categoria: "formaggio",
         restrizioni: ["nonvegano"]
     }, {
-        nome: "funghi champignon",
+        nome: "champignon",
         categoria: "verdura",
         restrizioni: []
     }, {
-        nome: "funghi porcini",
+        nome: "porcini",
         categoria: "verdura",
         restrizioni: []
     }, {
@@ -66,10 +66,10 @@ const useIngredients = () => {
     }, {
         nome: "pesto",
         categoria: "topping",
-        restrizioni: ["nonvegano"]
+        restrizioni: []
     }, {
         nome: "friarielli",
-        categoria: "topping",
+        categoria: "verdura",
         restrizioni: []
     }, {
         nome: "scaglie di grana",
@@ -145,15 +145,15 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "zucca",
-        categoria: "verdura",
+        categoria: "topping",
         restrizioni: []
     }, {
         nome: "fiori di zucca",
-        categoria: "verdura",
+        categoria: "topping",
         restrizioni: []
     }, {
         nome: "crema di zucca",
-        categoria: "topping",
+        categoria: "verdura",
         restrizioni: []
     }, {
         nome: "rucola",
@@ -173,7 +173,7 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "cipolle caramellate",
-        categoria: "verdura",
+        categoria: "topping",
         restrizioni: []
     }, {
         nome: "gorgonzola",
@@ -217,7 +217,7 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "pomodori secchi",
-        categoria: "verdura",
+        categoria: "topping",
         restrizioni: []
     }, {
         nome: "spinaci",
@@ -225,7 +225,7 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "ragù",
-        categoria: "topping",
+        categoria: "maiale",
         restrizioni: ["carne"]
     }, {
         nome: "pistacchi",
@@ -233,7 +233,7 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "sfilacci di cavallo",
-        categoria: "topping",
+        categoria: "maiale",
         restrizioni: ["carne"]
     }, {
         nome: "brie",
@@ -245,7 +245,7 @@ const useIngredients = () => {
         restrizioni: []
     }, {
         nome: "mais",
-        categoria: "verdura",
+        categoria: "topping",
         restrizioni: []
     }, {
         nome: "ricotta",
@@ -253,7 +253,36 @@ const useIngredients = () => {
         restrizioni: ["lattosio"]
     }] as Ingredient[];
 
-    const categories = [["maiale", "verdura"], ["maiale", "formaggio"], ["maiale", "topping"], ["pesce", "verdura"], ["pesce", "topping"], ["frutta", "formaggio"], ["formaggio", "formaggio"], ["formaggio", "verdura"], ["formaggio", "topping"], ["verdura", "verdura"], ["verdura", "topping"], ["maiale", "formaggio", "topping"], ["maiale", "formaggio", "verdura"], ["maiale", "verdura", "topping"], ["maiale", "topping", "topping"], ["pesce", "verdura", "topping"], ["pesce", "topping", "topping"], ["formaggio", "formaggio", "formaggio"], ["formaggio", "formaggio", "topping"], ["formaggio", "verdura", "topping"], ["formaggio", "topping", "topping"], ["verdura", "verdura", "topping"], ["maiale", "formaggio", "verdura", "topping"], ["maiale", "formaggio", "formaggio", "topping"], ["maiale", "formaggio", "formaggio", "verdura"], ["maiale", "formaggio", "topping", "topping"], ["maiale", "verdura", "verdura", "topping"], ["formaggio", "formaggio", "formaggio", "formaggio"]] as IngredientCategories;
+    const categories = [
+        ["maiale", "verdura"],
+        ["maiale", "formaggio"],
+        ["maiale", "topping"],
+        ["pesce", "verdura"],
+        ["pesce", "topping"],
+        ["frutta", "formaggio"],
+        ["formaggio", "formaggio"],
+        ["formaggio", "verdura"],
+        ["formaggio", "topping"],
+        ["verdura", "verdura"],
+        ["verdura", "topping"],
+        ["maiale", "formaggio", "topping"],
+        ["maiale", "formaggio", "verdura"],
+        ["maiale", "verdura", "topping"],
+        ["maiale", "topping", "topping"],
+        ["pesce", "verdura", "topping"],
+        ["pesce", "topping", "topping"],
+        ["formaggio", "formaggio", "formaggio"],
+        ["formaggio", "formaggio", "topping"],
+        ["formaggio", "verdura", "topping"],
+        ["formaggio", "topping", "topping"],
+        ["verdura", "verdura", "topping"],
+        ["maiale", "formaggio", "verdura", "topping"],
+        ["maiale", "formaggio", "formaggio", "topping"],
+        ["maiale", "formaggio", "formaggio", "verdura"],
+        ["maiale", "formaggio", "topping", "topping"],
+        ["maiale", "verdura", "verdura", "topping"],
+        ["formaggio", "formaggio", "formaggio", "formaggio"]
+    ] as IngredientCategories;
 
     return {
         ingredients,

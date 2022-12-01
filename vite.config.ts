@@ -58,9 +58,7 @@ export default defineConfig({
         AutoImport({
             imports: [
                 "vue",
-                "vue-router",
-                "@vueuse/core",
-                "@vueuse/head"
+                "@vueuse/core"
             ],
             resolvers: [dirResolver()]
         })
