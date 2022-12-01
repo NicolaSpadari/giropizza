@@ -9,9 +9,9 @@
 <br>
 
 <p align="center">
-  A tiny project to random generate pizza toppings (in italian).
+  A tiny project to randomly generate pizza toppings (in italian).
   <br>
-  No, ananas in not on the list.
+  No, ananas is not on the list.
 </p>
 
 ## Technologies used
