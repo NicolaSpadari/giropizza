@@ -6,7 +6,7 @@
                     <div>
                         <button grow rounded-full space-x-2 px-10 bg-red-800 text-white font-black uppercase text-3xl lg="text-5xl" tracking-wide py-5 @click="getPizza()">
                             <span>Genera</span>
-                            <i-heroicons-solid-plus text-white w-10 h-10 />
+                            <i-fa-solid-plus text-white w-10 h-10 />
                         </button>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                     <div>
                         <button grow rounded-xl space-x-2 px-7 border-2 border-red-800 text-red-700 font-black uppercase text-lg lg="text-2xl" tracking-wide py-3 @click="visible = true;">
                             <span>Personalizza</span>
-                            <i-heroicons-solid-pencil text-red-700 w-6 h-6 />
+                            <i-fa-solid-pen text-red-700 w-6 h-6 />
                         </button>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
                     <div v-show="props.visible" relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm="my-8 w-full max-w-3xl">
                         <div bg-dark-700 px-4 py-3 sm="px-6" text-right>
                             <button type="button" @click="emit('close')">
-                                <i-heroicons-solid-x-circle text-red-900 w-10 h-10 />
+                                <i-fa-solid-times-circle text-red-900 w-10 h-10 />
                             </button>
                         </div>
                         <div bg-dark-500 space-y-20 px-4 pt-5 pb-4 sm="p-10">
